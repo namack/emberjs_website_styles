@@ -1,5 +1,4 @@
-require "emberjs_website_styles/version"
+require "emberjs_website_styles/generator"
 
-module EmberjsWebsiteStyles
-  # Your code goes here...
-end
+emberjs_website_styles_path = File.expand_path("../../core", __FILE__)
+ENV["SASS_PATH"] = File.join([ENV["SASS_PATH"], emberjs_website_styles_path].compact)
